@@ -18,10 +18,7 @@ set(LIB_VERSION "${LIB_VERSION_MAJOR}.${LIB_VERSION_MINOR}.${LIB_VERSION_PATCH}"
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/third_party/cmake/modules/")
 
 # SAST
-find_program(CMAKE_CXX_CPPCHECK NAMES cppcheck)
-if(CMAKE_CXX_CPPCHECK)
-	list(APPEND CMAKE_CXX_CPPCHECK "--enable=all")
-endif()
+include(cppcheck.cmake)
 
 # feature checks
 include(CheckLibraryExists)
