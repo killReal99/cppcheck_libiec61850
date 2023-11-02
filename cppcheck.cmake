@@ -9,6 +9,7 @@ add_custom_target(
         COMMAND /usr/bin/cppcheck
         --language=c++
         --enable=all
+        --force
         --template="[{severity}][{id}] {message} {callstack} \(On {file}:{line}\)"
         ${ALL_SOURCE_FILES}
         2> cppcheck-result.xml
