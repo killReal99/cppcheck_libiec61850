@@ -1,7 +1,6 @@
 # additional target to perform cppcheck run, requires cppcheck
 
-# get all project files
-GET_ALL_FILES(ALL_SOURCE_FILES)
+find_program(CMAKE_CXX_CPPCHECK NAMES cppcheck)
 
 add_custom_target(
         cppcheck
