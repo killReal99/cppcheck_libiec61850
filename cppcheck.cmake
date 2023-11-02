@@ -8,6 +8,7 @@ add_custom_target(
         cppcheck
         COMMAND /usr/bin/cppcheck
         --language=c++
+        --std=c++20
         --enable=all
         --force
         --template="[{severity}][{id}] {message} {callstack} \(On {file}:{line}\)"
