@@ -7,6 +7,7 @@ file(GLOB_RECURSE ALL_SOURCE_FILES *.cpp *.h)
 add_custom_target(
         cppcheck
         COMMAND /usr/bin/cppcheck
+        --check-config
         --enable=all
         --force
         --xml
