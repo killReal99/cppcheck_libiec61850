@@ -7,9 +7,12 @@ file(GLOB_RECURSE ALL_SOURCE_FILES *.cpp *.h)
 add_custom_target(
         cppcheck
         COMMAND /usr/bin/cppcheck
-        --check-config
+#        --check-config need more research
+        --check-library
         --enable=all
         --force
+        --inconclusive
+        --max-ctu-depth=5 #need research
         --xml
         --xml-version=2
         --template="[{severity}][{id}] {message} {callstack} \(On {file}:{line}\)"
